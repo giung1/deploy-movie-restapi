@@ -1,0 +1,34 @@
+###RECUPERAR TODAS LAS PELIS
+GET http://localhost:1234/movies
+
+###RECUPERAR PELI POR ID
+GET http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+###RECUPERAR TODAS LAS PELI POR UN GENERO
+GET http://localhost:1234/movies?genre=fanTASY
+
+###CREAR UNA PELI
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "El padrino",
+  "year": 1975,
+  "director":"Francis Ford Coppola",
+  "duration": 175,
+  "poster": "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+}
+
+###ACTUALIZAR UNA PELI
+PATCH  http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+Content-Type: application/json
+
+{
+  "id":"xD",
+  "director": "Julio Brum",
+  "duration": 130
+}
