@@ -3,7 +3,7 @@ import crypto from 'node:crypto'
 import express from 'express'
 import { validateMovie, validatePartialMovie } from './schemas/movieSchema.js'
 
-const movies = JSON.parse(await readFile('./src/clase3/movies.json', 'utf8'))
+const movies = JSON.parse(await readFile('./movies.json', 'utf8'))
 
 const app = express()
 app.disable('x-powered-by')
